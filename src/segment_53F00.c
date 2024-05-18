@@ -1,5 +1,8 @@
 #include "common.h"
 
+extern s8 D_800BB539;
+extern s8 D_80092E80;
+
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80053300.s")
 
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_800533D8.s")
@@ -46,11 +49,23 @@
 
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80058D54.s")
 
+#if 0
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80058F3C.s")
+#else
+void func_80058F3C(void) {
+    D_800BB539 = 1;
+}
+#endif
 
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80058F50.s")
 
+#if 0
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80058F7C.s")
+#else
+s8 func_80058F7C(void) {
+    return D_80092E80;
+}
+#endif
 
 #pragma GLOBAL_ASM("asm/nonmatchings/segment_53F00/func_80058F8C.s")
 
